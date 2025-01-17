@@ -1,0 +1,637 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(76, 76, 214, 0.9);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+
+nav .logo img {
+    width: 60px;
+    height: 60px;
+    margin-left: 30px;
+    margin-top: 5px;
+    align-content: center;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav .nav-button button {
+    border: none;
+    padding: 10px 20px;
+    margin: 0px 20px 0px 0px;
+    border-radius: 50px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+nav .nav-button button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+nav ul li:hover {
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+nav ul li a:hover {
+    color: #000;
+    cursor: url("./Project_Images/sword_cursor.png"), auto;
+}
+
+
+
+.menu-bar{
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+@media all and (max-width: 870px){
+   nav .logo img {
+        margin-right: 400px;   
+    }
+
+    .nav-button{
+        display: none;
+    }
+    nav {
+        flex-direction: column;
+        position: sticky;
+    }
+    nav ul {
+        text-align: center;
+        display: none; 
+    }
+
+    nav ul li {
+        display: block;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .menu-bar {
+        display: block;
+        position: absolute;
+        right: 80px;
+        top: 25px;
+    }
+    
+    nav .show-menu {
+        display: block;
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    background-color: #000;
+}
+
+.main-text {
+    font-size: 30px;
+    background-color: #000;
+    color: white;
+    align-content: center;
+}
+.main h2, .animated-text {
+    margin-left: 190px;
+}
+
+.main .animated-text {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+
+.main img {
+    width: 500px;
+    height: 500px;
+    margin: 100px;
+
+}
+
+
+
+
+
+.animated-text span {
+    position: relative;
+}
+
+
+.animated-text span::before {
+    content: "Front End Dev";
+    color: rgb(76, 76, 214);
+    animation: words 15s infinite;
+}
+
+.animated-text span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #000;
+    border-left: 2px solid #fff;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+    
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid #000;
+    }
+    
+}
+
+
+@keyframes words {
+    0%, 30% {
+       content: "Front End Dev";
+    }
+
+    31%, 60% {
+        content: "Back End Dev";
+     }
+
+     61%, 82% {
+        content: "FullStack Developer";
+     }
+    
+}
+
+@keyframes typing {
+    10%, 15%, 30%, 50%, 55%, 70%, 75%, 90%, 95% {
+        width: 0;
+    }
+
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+        width: calc(100% + 8px);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.about img {
+    width: 500px;
+    height: 400px;
+    float: left;
+    background-size: cover;
+}
+
+.about h2 {
+    overflow: hidden;
+    display: inline;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 0;
+    padding: 10px 10px;
+}
+
+.about h2:hover {
+    background-color: rgb(76, 76, 214);
+    color: #fff;
+}
+
+.about ul {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    padding: 20px;
+    list-style-position: inside;
+    
+}
+
+.about ul li {
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.scroll-img {
+    width: 100%;
+    height: 500px;
+    background-image: url('./Project_Images/birds.gif');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    margin: 50px;
+    margin-top:150px;
+    padding: 50px;  /* Outside the container */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.skills-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;           /* Horizontal gap of the Card */
+    padding-top: 40px;   /* Vertical Outside top the Card */
+}
+
+.row {
+    flex: 30%;
+    height: 100px;
+    padding: 10px;       /* Inside the Card  (Name) */
+    background-color: rgb(76, 76, 214);
+    border-radius: 10px;
+    color: white;
+}
+
+.row .progress {
+    width: auto;
+    height: 20px;
+    margin: 15px;       /* Around the Progress Bar */
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.row .progress .range {
+    height: 20px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.row .progress .range span {
+    color: #fff;
+    float: right;
+    margin-right: 15px;
+}
+
+ .skills-card-2 {
+    margin-top: 20px;
+ }
+
+.row .progress .html-range {
+    width: 70%;
+}
+
+.row .progress .css-range {
+    width: 30%;
+}
+
+.row .progress .js-range {
+    width: 10%;
+}
+
+.row .progress .sql-range {
+    width: 50%;
+}
+
+.row .progress .c-range {
+    width: 40%;
+}
+
+.row .progress .java-range {
+    width: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.scroll-img-2{
+    width: 100%;
+    height: 500px;
+    background-image: url('./Project_Images/cloud.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.portfolio {
+    margin-top: 50px;
+    padding: 40px;
+    overflow: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.portfolio h1 {
+    margin: 20px;
+}
+
+.project-1 {
+    height: auto;
+    text-align: center;
+    margin: 30px;
+    margin-bottom: 50px;
+    overflow: auto;
+    transition: all 0.3s ease-out;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.project-1 h3 {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.project-1 img, h3 {
+    margin: 30px;
+}
+
+.project-1 p {
+    padding: 0px 20px;
+}
+
+
+.project-1 h3,p {
+    text-align: center;
+}
+
+.project-1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 1px 2px 2px rgb(64, 64, 64);
+    background-color: rgb(76, 76, 214);
+    color: #fff;
+}
+
+.project-2 {
+    margin-top: 50px;
+}
+
+.portfolio-content {
+    margin-top: 30px;
+}
+
+
+
+.project-1 img{
+    width: 350px;
+    height: 200px;
+    float: left;
+}
+
+
+
+.project-2 img{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact {
+    background-color: rgb(76, 76, 214);
+    color: #fff;
+    padding: 30px;
+    margin: 100px 50px 50px 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contact h1 {
+    padding: 15px;
+}
+
+.name, .email {
+    width: 48%;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.name[placeholder], .email[placeholder] {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.contact form .message {
+    padding: 10px;
+    margin: 10px;
+    width: 98%;
+    height: 200px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.contact button {
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #fff;
+    color: #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    transition: width 0.1s ease-in;
+}
+
+
+.contact button:hover {
+    width: 210px;
+ }
+
+
+
+
+
+
+
+
+
+
+.footer {
+    width: 100%;
+    height: 600px;
+    margin-top: 0px;
+    background-color: black;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.footer img {
+    position: relative;
+    left: 47%;
+    top: 10%;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+}
+
+
+.footer p {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    left: 47%;
+    top: 6.5%;
+    font-size: 20px;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.transition{
+    transition: step-start;    
+}
